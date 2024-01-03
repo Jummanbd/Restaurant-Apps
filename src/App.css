@@ -1,5 +1,27 @@
+.app_header {
+  background-color: var(--color-black);
+}
+.header-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 99;
+  -webkit-transition: ease-in-out 0.5s;
+  transition: ease-in-out 0.5s;
+}
+.header-fixed.bg {
+  -webkit-box-shadow: 0 0 40px rgba(82, 85, 90, 0.1);
+  box-shadow: 0 0 40px rgba(82, 85, 90, 0.1);
+  background: #1a181b;
+}
+
 .section__padding {
-  padding: 4rem 6rem;
+  padding-top: 10rem;
+}
+.section_padding_t_b {
+  padding: 5rem 0;
 }
 
 .flex__center {
@@ -9,7 +31,7 @@
 }
 
 .app__bg {
-  background: url('./assets/bg.png');
+  background: url("./assets/bg.png");
   background-position: center;
   background-size: cover;
   background-repeat: repeat;
@@ -20,12 +42,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  min-height: 100vh;
+  gap: 30px;
 }
 
 .app__wrapper_info {
-  flex: 1;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -34,12 +54,10 @@
 }
 
 .app__wrapper_img {
-  flex: 1;
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: end;
   align-items: center;
-
   margin-left: 2rem;
 }
 
@@ -54,17 +72,17 @@
 
 .custom__button {
   background-color: var(--color-crimson);
-    color: var(--color-black);
-    font-family: var(--font-base);
-    font-weight: 700;
-    letter-spacing: 0.04em;
-    line-height: 28px;
-    font-size: 16px;
-    padding: 0.5rem 1.5rem;
-    border-radius: 1px;
-    border: none;
-    outline: none;
-    cursor: pointer;
+  color: var(--color-black);
+  font-family: var(--font-base);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  line-height: 28px;
+  font-size: 16px;
+  padding: 0.5rem 1.5rem;
+  border-radius: 1px;
+  border: none;
+  outline: none;
+  cursor: pointer;
 }
 
 .p__cormorant {
@@ -73,7 +91,7 @@
   font-weight: 700;
   letter-spacing: 0.04em;
   text-transform: capitalize;
-  font-feature-settings: 'tnum' on, 'lnum' on;
+  font-feature-settings: "tnum" on, "lnum" on;
   line-height: 29.9px;
   font-size: 23px;
 }
@@ -91,7 +109,7 @@
 .headtext__cormorant {
   font-family: var(--font-base);
   color: var(--color-golden);
-  font-size: 64px;
+  font-size: 56px;
   line-height: 83.2px;
   letter-spacing: 0.04em;
   text-transform: capitalize;
@@ -101,77 +119,56 @@
   width: 45px;
 }
 
-@media screen and (min-width: 2000px) {
-  .custom__button,
-  .p__cormorant {
-    font-size: 37px;
-    line-height: 67px;
-  }
-
-  .p__opensans {
-    font-size: 30px;
-    line-height: 50px;
-  }
-
-  .headtext__cormorant {
-    font-size: 150px;
-    line-height: 210px;
-  }
-
-  .spoon__img {
-    width: 80px;
-  }
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
 }
-
-@media screen and (max-width: 1150px) {
+@media (min-width: 320px) and (max-width: 991px) {
   .app__wrapper {
-    flex-direction: column;
+    flex-wrap: wrap;
   }
-
   .app__wrapper_img {
-    margin: 5rem 0 0 0;
-  }
-
-  .app__wrapper_img-reverse {
-    margin: 0 0 5rem 0;
-  }
-
-  .app__wrapper_img img {
-    width: 100%;
+    justify-content: center;
+    margin-left: 0;
+    margin-top: 3rem;
   }
 }
-
-@media screen and (max-width: 850px) {
+@media (max-width: 768px) {
   .section__padding {
-    padding: 4rem;
+    padding-top: 6rem;
+  }
+  @media (max-width: 425px) {
+    .headtext__cormorant {
+      line-height: 72px;
+    }
+  }
+}
+@media (min-width: 425px) {
+  .container {
+    max-width: 400px;
+  }
+}
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
   }
 }
 
-@media screen and (max-width: 650px) {
-  .section__padding {
-    padding: 4rem 2rem;
-  }
-  
-  .p__cormorant {
-    font-size: 21px;
-  }
-
-  .p__opensans {
-    font-size: 14px;
-  }
-}
-
-@media screen and (max-width: 450px) {
-  .p__opensans {
-    font-size: 12px;
-  }
-
-  .p__cormorant {
-    font-size: 19px;
-  }
-
-  .headtext__cormorant {
-    font-size: 45px;
-    line-height: 70px;
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
   }
 }

@@ -2,7 +2,7 @@ import images from './images';
 
 const wines = [
   {
-    title: 'Chapel Hill Shiraz',
+    title: 'Chapel Shiraz',
     price: '$56',
     tags: 'AU | Bottle',
   },
@@ -12,12 +12,12 @@ const wines = [
     tags: 'AU | Bottle',
   },
   {
-    title: 'La Vieillw Rose',
+    title: 'Vieillw Rose',
     price: '$44',
     tags: 'FR | 750 ml',
   },
   {
-    title: 'Rhino Pale Ale',
+    title: 'Rhino Pale',
     price: '$31',
     tags: 'CA | 750 ml',
   },
@@ -28,31 +28,59 @@ const wines = [
   },
 ];
 
-const cocktails = [
+const burgers = [
   {
-    title: 'Aperol Sprtiz',
+    title: 'Hamburger',
     price: '$20',
-    tags: 'Aperol | Villa Marchesi prosecco | soda | 30 ml',
+    tags: 'Aperol | Villa Marchesi',
   },
   {
-    title: "Dark 'N' Stormy",
+    title: "Turkey Burger",
     price: '$16',
-    tags: 'Dark rum | Ginger beer | Slice of lime',
+    tags: 'Dark rum | Ginger beer ',
   },
   {
     title: 'Daiquiri',
     price: '$10',
-    tags: 'Rum | Citrus juice | Sugar',
+    tags: 'Rum | Citrus | Sugar',
+  },
+  {
+    title: 'ELK Burger',
+    price: '$31',
+    tags: 'Bourbon | Brown sugar',
+  },
+  {
+    title: 'Vegge Burger',
+    price: '$26',
+    tags: 'Gin | Sweet Vermouth ',
+  },
+];
+
+const cocktails = [
+  {
+    title: 'Aperol Sprtiz',
+    price: '$20',
+    tags: 'Aperol | Villa prosecco',
+  },
+  {
+    title: "Dark Stormy",
+    price: '$16',
+    tags: 'Dark rum | Ginger beer',
+  },
+  {
+    title: 'Daiquiri',
+    price: '$10',
+    tags: 'Rum | Sugar',
   },
   {
     title: 'Old Fashioned',
     price: '$31',
-    tags: 'Bourbon | Brown sugar | Angostura Bitters',
+    tags: 'Bourbon | Brown sugar',
   },
   {
     title: 'Negroni',
     price: '$26',
-    tags: 'Gin | Sweet Vermouth | Campari | Orange garnish',
+    tags: 'Gin | Sweet Vermouth',
   },
 ];
 
@@ -79,4 +107,4 @@ const awards = [
   },
 ];
 
-export default { wines, cocktails, awards };
+export default { wines, burgers, cocktails, awards };

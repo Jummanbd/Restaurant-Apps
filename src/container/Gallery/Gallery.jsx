@@ -1,5 +1,4 @@
 import React from 'react';
-import { BsInstagram, BsArrowLeftShort, BsArrowRightShort } from 'react-icons/bs';
 
 import { SubHeading } from '../../components';
 import { images } from '../../constants';
@@ -19,26 +18,32 @@ const Gallery = () => {
   };
 
   return (
-    <div className="app__gallery flex__center">
-      <div className="app__gallery-content">
-        <SubHeading title="Instagram" />
-        <h1 className="headtext__cormorant">Photo Gallery</h1>
-        <p className="p__opensans" style={{ color: '#AAAAAA', marginTop: '2rem' }}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Volutpat mattis ipsum turpis elit elit scelerisque egestas mu.</p>
-        <button type="button" className="custom__button">View More</button>
-      </div>
-      <div className="app__gallery-images">
-        <div className="app__gallery-images_container" ref={scrollRef}>
-          {[images.gallery01, images.gallery02, images.gallery03, images.gallery04].map((image, index) => (
-            <div className="app__gallery-images_card flex__center" key={`gallery_image-${index + 1}`}>
-              <img src={image} alt="gallery_image" />
-              <BsInstagram className="gallery__image-icon" />
-            </div>
-          ))}
+    <div className="app__gallery section_padding_t_b flex__center">
+      <div className="container">
+        <div className="app__gallery-content">
+          <SubHeading title="Instagram" />
+          <h1 className="headtext__cormorant">Photo Gallery</h1>
+          <p className="p__opensans" style={{ color: '#AAAAAA', marginTop: '2rem' }}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Volutpat mattis ipsum turpis elit elit scelerisque egestas mu.</p>
+          <button type="button" className="custom__button">View More</button>
         </div>
-        <div className="app__gallery-images_arrows">
-          <BsArrowLeftShort className="gallery__arrow-icon" onClick={() => scroll('left')} />
-          <BsArrowRightShort className="gallery__arrow-icon" onClick={() => scroll('right')} />
-        </div>
+        <div class="gallery__wrap">
+          <article class="gallery__item">
+            <img src= {images.gallery05} alt="Fearless leader" />
+          </article>
+          <article class="gallery__item">
+            <img src= {images.gallery02} alt="Southbank - Strike a Pose"  />
+          </article>
+          <article class="gallery__item">
+            <img src= {images.gallery03} alt="Tower Bridge, light trails" />
+          </article>
+          <article class="gallery__item">
+            <img src= {images.gallery04} alt="The Clyde Arc"/>
+          </article>
+          <article class="gallery__item">
+            <img src= {images.gallery01} alt="Reflections at St Pauls"/>
+          </article>
+       </div>
+
       </div>
     </div>
   );
